@@ -1,0 +1,106 @@
+{
+  "name": "FalconTruck - Catálogo Virtual",
+  "short_name": "FalconTruck",
+  "description": "Catálogo virtual de produtos automotivos FalconTruck",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1c3379",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["business", "productivity", "automotive"],
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-152-150x150.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-96.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-384-300x300.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-384-300x300.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Catálogo de Produtos",
+      "short_name": "Catálogo",
+      "description": "Acessar catálogo de produtos",
+      "url": "/#/catalog",
+      "icons": [
+        {
+          "src": "https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-96.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Minha Cotação",
+      "short_name": "Cotação",
+      "description": "Ver minha cotação atual",
+      "url": "/#/cotacao",
+      "icons": [
+        {
+          "src": "https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-96.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop.png",
+      "type": "image/png",
+      "sizes": "1280x720",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshots/mobile.png",
+      "type": "image/png",
+      "sizes": "375x667",
+      "form_factor": "narrow"
+    }
+  ]
+}

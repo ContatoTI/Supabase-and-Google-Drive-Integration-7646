@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  
+  <!-- PWA Primary Meta Tags -->
+  <title>FalconTruck - Catálogo Virtual</title>
+  <meta name="title" content="FalconTruck - Catálogo Virtual">
+  <meta name="description" content="Catálogo virtual de produtos automotivos FalconTruck. Acesse nosso catálogo completo, faça cotações e gerencie pedidos.">
+  <meta name="keywords" content="falcontruck, produtos automotivos, catálogo, peças, caminhão, truck">
+  <meta name="author" content="FalconTruck">
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json">
+  
+  <!-- Theme Colors -->
+  <meta name="theme-color" content="#1c3379">
+  <meta name="msapplication-TileColor" content="#1c3379">
+  <meta name="msapplication-navbutton-color" content="#1c3379">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- PWA Apple Touch Icons -->
+  <link rel="apple-touch-icon" href="https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-152-150x150.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-72.png">
+  <link rel="apple-touch-icon" sizes="96x96" href="https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-96.png">
+  <link rel="apple-touch-icon" sizes="128x128" href="https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-128.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-152-150x150.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-96.png">
+  <link rel="apple-touch-icon" sizes="384x384" href="https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-384-300x300.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-384-300x300.png">
+  
+  <!-- Standard Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-72.png">
+  <link rel="shortcut icon" href="https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-96.png">
+  
+  <!-- Apple PWA Meta Tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="FalconTruck">
+  
+  <!-- Microsoft PWA Meta Tags -->
+  <meta name="msapplication-TileImage" content="https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-144.png">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://falcontruck.com/">
+  <meta property="og:title" content="FalconTruck - Catálogo Virtual">
+  <meta property="og:description" content="Catálogo virtual de produtos automotivos FalconTruck">
+  <meta property="og:image" content="https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-384-300x300.png">
+  <meta property="og:image:width" content="384">
+  <meta property="og:image:height" content="384">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://falcontruck.com/">
+  <meta property="twitter:title" content="FalconTruck - Catálogo Virtual">
+  <meta property="twitter:description" content="Catálogo virtual de produtos automotivos FalconTruck">
+  <meta property="twitter:image" content="https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-384-300x300.png">
+  
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="/src/main.jsx" as="script">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Critical CSS Inline -->
+  <style>
+    /* Critical CSS for faster loading */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    #root {
+      width: 100%;
+      height: 100vh;
+    }
+    
+    /* Loading spinner inicial - apenas placeholder */
+    .pwa-loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #1c3379 0%, #2d4a96 50%, #3b82f6 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .pwa-loading::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: backgroundMove 20s linear infinite;
+    }
+    
+    @keyframes backgroundMove {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(50px, 50px); }
+    }
+    
+    .pwa-loading-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .pwa-logo-container {
+      margin-bottom: 2rem;
+      animation: logoFloat 3s ease-in-out infinite;
+    }
+    
+    .pwa-logo-placeholder {
+      height: 120px;
+      width: 200px;
+      background: transparent;
+    }
+    
+    @keyframes logoFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .pwa-spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid rgba(255, 255, 255, 0.2);
+      border-top: 4px solid #ffffff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 1.5rem;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .pwa-loading-text {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      animation: textPulse 2s ease-in-out infinite;
+    }
+    
+    .pwa-loading-subtext {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.875rem;
+      text-align: center;
+      font-weight: 300;
+    }
+    
+    @keyframes textPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+    
+    /* PWA specific styles */
+    @media (display-mode: standalone) {
+      body {
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+      }
+    }
+    
+    /* Mobile optimizations */
+    @media (max-width: 768px) {
+      body {
+        overflow-x: hidden;
+      }
+      .pwa-logo-placeholder {
+        height: 100px;
+        width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <!-- Loading fallback -->
+    <div class="pwa-loading">
+      <div class="pwa-loading-content">
+        <div class="pwa-logo-container">
+          <!-- Placeholder invisível - será substituído pelo React -->
+          <div class="pwa-logo-placeholder"></div>
+        </div>
+        <div class="pwa-spinner"></div>
+        <div class="pwa-loading-text">Carregando...</div>
+        <div class="pwa-loading-subtext">Catálogo Virtual de Produtos</div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Service Worker Registration -->
+  <script>
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function(registration) {
+            console.log('[PWA] Service Worker registered successfully:', registration.scope);
+            // Check for updates periodically
+            setInterval(function() {
+              registration.update();
+            }, 60000);
+          })
+          .catch(function(error) {
+            console.log('[PWA] Service Worker registration failed:', error);
+          });
+      });
+    }
+
+    // Enhanced PWA Install Prompt handling
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', function(e) {
+      console.log('[PWA] beforeinstallprompt fired');
+      e.preventDefault();
+      deferredPrompt = e;
+      // Dispatch custom event for React component
+      window.dispatchEvent(new CustomEvent('pwa-install-available', { detail: e }));
+    });
+
+    // Track PWA usage
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+      console.log('[PWA] Running in standalone mode');
+      // PWA analytics
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'pwa_launch', {
+          'event_category': 'PWA',
+          'event_label': 'Standalone Launch'
+        });
+      }
+    }
+
+    // Handle PWA orientation changes
+    window.addEventListener('orientationchange', function() {
+      setTimeout(function() {
+        window.scrollTo(0, 1);
+      }, 500);
+    });
+
+    // Prevent zoom on iOS
+    document.addEventListener('gesturestart', function(e) {
+      e.preventDefault();
+    });
+    document.addEventListener('gesturechange', function(e) {
+      e.preventDefault();
+    });
+    document.addEventListener('gestureend', function(e) {
+      e.preventDefault();
+    });
+
+    // Debug: Force install prompt (development only)
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      setTimeout(() => {
+        console.log('[PWA Debug] Creating debug install button');
+        const debugBtn = document.createElement('button');
+        debugBtn.textContent = 'Debug: Install PWA';
+        debugBtn.style.cssText = `
+          position: fixed;
+          top: 10px;
+          right: 10px;
+          z-index: 9999;
+          background: #10b981;
+          color: white;
+          border: none;
+          padding: 8px 12px;
+          border-radius: 4px;
+          font-size: 12px;
+          cursor: pointer;
+        `;
+        debugBtn.onclick = () => {
+          window.dispatchEvent(new CustomEvent('pwa-force-install'));
+        };
+        document.body.appendChild(debugBtn);
+      }, 2000);
+    }
+  </script>
+  
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

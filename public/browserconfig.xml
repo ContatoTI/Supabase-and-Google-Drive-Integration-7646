@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square70x70logo src="https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-72.png"/>
+      <square150x150logo src="https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-152-150x150.png"/>
+      <square310x310logo src="https://falcontruck.com.br/wp-content/uploads/2025/07/favicon-falcontruck-384-300x300.png"/>
+      <TileColor>#1d4ed8</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>

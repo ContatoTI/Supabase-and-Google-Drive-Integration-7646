@@ -1,0 +1,6 @@
+# ESLint ignore file
+dist/
+build/
+node_modules/
+public/sw.js
+*.min.js
